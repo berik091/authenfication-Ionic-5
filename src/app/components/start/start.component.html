@@ -1,12 +1,18 @@
-<div class="btn_authenfication">
-  <ion-button shape="round" color="primary" (click)="navigateToLoginPage()"
-    >Login</ion-button
-  >
-  <ion-button
-    shape="round"
-    color="primary"
-    fill="outline"
-    (click)="navigateToSignUp()"
-    >Sign Up</ion-button
-  >
-</div>
+<ion-grid fixed class="ion-padding-horizontal">
+  <ion-row class="ion-padding-horizontal">
+    <ion-col>
+      <ion-button shape="round" color="primary" (click)="navigateToLoginPage()"
+        >Login</ion-button
+      >
+    </ion-col>
+    <ion-col>
+      <ion-button
+        shape="round"
+        color="primary"
+        fill="outline"
+        (click)="navigateToSignUp()"
+        >Sign Up</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-grid>
