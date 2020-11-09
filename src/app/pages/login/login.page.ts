@@ -9,8 +9,9 @@ import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
   styleUrls: ["./login.page.scss"],
 })
 export class LoginPage implements OnInit {
+  showLoader: boolean;
+  p_bar_value: number;
   public html: SafeHtml;
-
   public text: string = '<a href="/home">NT Gift</a>';
 
   constructor(private router: Router, private sanitizer: DomSanitizer) {
@@ -19,7 +20,15 @@ export class LoginPage implements OnInit {
     );
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    let mask = document.querySelector(".mask");
+    window.addEventListener("DOMContentLoaded", () => {
+      mask.classList.add("hide");
+      setTimeout(() => {
+        mask.remove();
+      }, 5000);
+    });
+  }
   login() {
     this.router.navigate(["/home/feed"]);
   }

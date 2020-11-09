@@ -13,32 +13,55 @@ const routes: Routes = [
       import("./home/home.module").then((m) => m.HomePageModule),
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    path: "login",
+    loadChildren: () =>
+      import("./pages/login/login.module").then((m) => m.LoginPageModule),
   },
   {
-    path: 'signup',
-    loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
+    path: "signup",
+    loadChildren: () =>
+      import("./pages/signup/signup.module").then((m) => m.SignupPageModule),
   },
   {
-    path: 'welcome',
-    loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
+    path: "welcome",
+    loadChildren: () =>
+      import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
   },
   {
-    path: 'feed',
-    loadChildren: () => import('./pages/feed/feed.module').then( m => m.FeedPageModule)
+    path: "feed",
+    loadChildren: () =>
+      import("./pages/feed/feed.module").then((m) => m.FeedPageModule),
   },
   {
-    path: 'notifications',
-    loadChildren: () => import('./pages/notifications/notifications.module').then( m => m.NotificationsPageModule)
+    path: "notifications",
+    loadChildren: () =>
+      import("./pages/notifications/notifications.module").then(
+        (m) => m.NotificationsPageModule
+      ),
   },
   {
-    path: 'messages',
-    loadChildren: () => import('./pages/messages/messages.module').then( m => m.MessagesPageModule)
+    path: "messages",
+    loadChildren: () =>
+      import("./pages/messages/messages.module").then(
+        (m) => m.MessagesPageModule
+      ),
   },
   {
-    path: 'settings',
-    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+    path: "settings",
+    loadChildren: () =>
+      import("./pages/settings/settings.module").then(
+        (m) => m.SettingsPageModule
+      ),
+  },
+  {
+    path: "create",
+    loadChildren: () =>
+      import("./pages/create/create.module").then((m) => m.CreatePageModule),
+  },
+  {
+    path: "index",
+    loadChildren: () =>
+      import("./pages/index/index.module").then((m) => m.IndexPageModule),
   },
 ];
 @NgModule({
